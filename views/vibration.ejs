@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Data Center</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Engineering Data Center</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="/" class="sidebar-link">
+                        <i class="lni lni-bar-chart align-middle"></i>
+                        <span>Generator Harmonic</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/vibration" class="sidebar-link">
+                        <i class="bi bi-clipboard-pulse"></i>
+                        <span>Generator Vibration</span>
+                    </a>
+                </li>               
+                <li class="sidebar-item">
+                    <a href="/flow" class="sidebar-link">
+                        <i class="bi bi-fan align-middle"></i>
+                        <span>Turbine Discharge Flow</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="main text-bg-light">
+            <main class="content px-3 py-4">
+                <div class="container-fluid ">
+                    <div class="mb-3">
+                        <h3 class="fw-bold fs-4 mb-3">GENERATOR VIBRATION DASHBOARD</h3>
+                        <div class="row">
+                            <!-- TURBINE 1 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow">
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 </h5>
+                                        <table class="table table-sm mb-0">
+                                            <tbody id="vibration-T1">
+                                                <tr><td><strong>Vibration RMS</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Velocity RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Acceleration RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Vibration Spectrum</strong></td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Rotor Harmonic (273 rpm)</td><td></td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 1st (4.55 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 2nd (9.10 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 3rd (13.65 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td class="ps-3">- Peak Value</td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Frequency</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Value</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Energy Band</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Vortex Zone Energy (0-2 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Load Power</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Load</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                                <tr>
+                                                <td class="ps-3">- Power Factor</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TURBINE 2 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow">
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 </h5>
+                                        <table class="table table-sm mb-0">
+                                             <tbody id="vibration-T2">
+                                                <tr><td><strong>Vibration RMS</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Velocity RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Acceleration RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Vibration Spectrum</strong></td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Rotor Harmonic (273 rpm)</td><td></td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 1st (4.55 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 2nd (9.10 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 3rd (13.65 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td class="ps-3">- Peak Value</td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Frequency</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Value</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Energy Band</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Vortex Zone Energy (0-2 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Load Power</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Load</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                                <tr>
+                                                <td class="ps-3">- Power Factor</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TURBINE 3 -->
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow">
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 </h5>
+                                        <table class="table table-sm mb-0">
+                                             <tbody id="vibration-T3">
+                                                <tr><td><strong>Vibration RMS</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Velocity RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Acceleration RMS</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Vibration Spectrum</strong></td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-3">- Rotor Harmonic (273 rpm)</td><td></td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 1st (4.55 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 2nd (9.10 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5"> - 3rd (13.65 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td class="ps-3">- Peak Value</td><td></td></tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Frequency</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr>
+                                                <td class="ps-5">- Value</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Energy Band</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Vortex Zone Energy (0-2 Hz)</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+
+                                                <tr><td><strong>Load Power</strong></td><td class="text-end"></td></tr>
+                                                <tr>
+                                                <td class="ps-3">- Load</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                                <tr>
+                                                <td class="ps-3">- Power Factor</td>
+                                                <td class="text-end">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <p class="mb-3"><i class="bi bi-stopwatch-fill"></i>  Real Time Data</p>
+                        
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vibration Raw Data </h5>
+                                        <div style="height:300px">
+                                            <canvas id="waveform-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vibration Raw Data </h5>
+                                        <div style="height:300px">
+                                            <canvas id="waveform-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vibration Raw Data </h5>
+                                        <div style="height:300px">
+                                            <canvas id="waveform-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                          
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vibration Spectrum</h5>
+                                        <div style="height:300px">
+                                            <canvas id="spectrum-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vibration Spectrum</h5>
+                                        <div style="height:300px">
+                                            <canvas id="spectrum-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vibration Spectrum</h5>
+                                        <div style="height:300px">
+                                            <canvas id="spectrum-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vibration Spectrum Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="specBand-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vibration Spectrum Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="specBand-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vibration Spectrum Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="specBand-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vibration Energy Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="energy-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vibration Energy Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="energy-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vibration Energy Band</h5>
+                                        <div style="height:300px">
+                                            <canvas id="energy-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vibration RMS & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="rms-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vibration RMS & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="rms-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vibration RMS & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="rms-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #1 - Vortex Zone Energy & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="vortex-T1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #2 - Vortex Zone Energy & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="vortex-T2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="card border-0 mb-4 shadow" >
+                                    <div class="card-body py-4">
+                                        <h5 class="fw-bold">Turbine #3 - Vortex Zone Energy & Load </h5>
+                                        <div style="height:300px">
+                                            <canvas id="vortex-T3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+    <script type="module" src="/ws.js"></script>
+    <script type="module" src="/vibration.js"></script>
+
+
+</body>
+
+</html>

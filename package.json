@@ -1,0 +1,28 @@
+{
+  "name": "Engineering Data Center",
+  "version": "1.0.0",
+  "description": "Hydro Turbine Generator Harmonic, Generator Vibration & Turbine Performance Monitoring",
+  "main": "indexpowermeter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kusumayp",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "cors": "^2.8.5",
+    "crc": "^4.3.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "fft-js": "^0.0.12",
+    "jsmodbus": "^4.0.10",
+    "modbus-serial": "^8.0.21-no-serial-port",
+    "mongoose": "^8.15.1",
+    "net": "^1.0.2",
+    "node-storage": "^0.0.9",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "serialport": "^13.0.0",
+    "ws": "^8.16.0"
+  }
+}
